@@ -1,4 +1,5 @@
-body {
+/* default index.css code */
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,27 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+/* default code above can be deleted if using tailwind */
+/* below code added from https://tailwindcss.com/docs/guides/create-react-app */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* import font from google */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+/* apply tailwind styling */
+@layer base {
+    body {
+        /* use [] to find imported google font */
+        @apply font-[Raleway];
+    }
+    li {
+        /* px for padding on x-axis */
+        @apply px-4;
+        /* mouse pointer becomes cursor pointer when hovering over elements */
+        @apply cursor-pointer
+    }
 }

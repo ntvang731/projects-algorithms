@@ -71,8 +71,8 @@ const CreateService = (props) => {
                         }
                     </div>
                     <div>
-                        <label>Service Description: </label>
-                        <textarea name="description" onChange={changeHandler} placeholder='Please describe photography service, location, and date(s).'></textarea>
+                        <label>Description: </label>
+                        <textarea name="description" onChange={changeHandler} placeholder='Please describe photography service. Provide location, time, and date.'></textarea>
                         {
                             errors.description?
                             <p className="validatorError">{errors.description.message}</p>:

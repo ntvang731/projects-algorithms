@@ -6,6 +6,7 @@ import Display from './components/Display';
 import CreateService from './components/CreateService';
 import OneService from './components/OneService';
 import EditService from './components/EditService';
+import Navbar from './components/Navbar';
 
 function App() {
   // establishing state for our list of requested services
@@ -13,8 +14,9 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar/>
       <BrowserRouter>
-      <h1>nu Aperture</h1>
+      <h1 className='text-4xl font-bold'>nuAperture</h1>
       <br/>
         <Routes>
           {/* route that will render Display component */}
