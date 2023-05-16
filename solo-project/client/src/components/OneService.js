@@ -45,11 +45,11 @@ const OneService = (props) => {
     }
 
     return (
-        <div>
-            <Link to={'/'}>back to home</Link><br/><br/>
+        <div className='w-full h-screen bg-[#0a192f] justify-center items-center p-4 text-gray-300'>
+            <Link className='underline' to={'/'}>back to home</Link><br/><br/>
                 {/* service.name --> show is the getter from useState */}
                 {/* service.name --> title is the keyname */}
-                <h2>Service Request Details</h2>
+                <h2 className='text-3xl'>Service Request Details</h2><br/>
             <div className="border">
                 <h3>Requested By: {service.firstName} {service.lastName}</h3>
                 <h3>Description: {service.description}</h3>

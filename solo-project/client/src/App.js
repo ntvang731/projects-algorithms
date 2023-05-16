@@ -7,6 +7,10 @@ import CreateService from './components/CreateService';
 import OneService from './components/OneService';
 import EditService from './components/EditService';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 function App() {
   // establishing state for our list of requested services
@@ -14,10 +18,12 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
       <BrowserRouter>
-      <h1 className='text-4xl font-bold'>nuAperture</h1>
-      <br/>
+      <Navbar/>
+      <Home/>
+      <About/>
+      <Portfolio/>
+      <Contact/>
         <Routes>
           {/* route that will render Display component */}
           <Route path='/' element={<Display serviceList={serviceList}

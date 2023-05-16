@@ -1,8 +1,8 @@
 // type 'rafce' for creating boilerplate; requires ES7+ React/Redux/React-Native snippets extension
-
-import React, {useState} from 'react'
-import nuAperture from '../assets/nuAperture.png'
-import {FaBars, FaTimes} from 'react-icons/fa'
+import React, {useState} from 'react';
+import nuAperture from '../assets/nuAperture.png';
+import {FaBars, FaTimes} from 'react-icons/fa';
+import {Link} from 'react-scroll';
 
 const Navbar = () => {
 
@@ -26,10 +26,19 @@ const Navbar = () => {
             <div>
                 {/* elements will be hidden if UNDER breakpoint medium (768 px?) */}
                 <ul className='hidden md:flex'>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Portfolio</li>
-                    <li>Contact</li>
+                    <li>
+                        {/* to="home" points to name="home" in Home.js */}
+                        <Link to="home" smooth={true} duration={500}>Home</Link>
+                    </li>
+                    <li>
+                        <Link to="about" smooth={true} duration={500}>About</Link>
+                    </li>
+                    <li>
+                        <Link to="portfolio" smooth={true} duration={500}>Portfolio</Link>
+                    </li>
+                    <li>
+                        <Link to="contact" smooth={true} duration={500}>Contact</Link>
+                    </li>
                 </ul>
             </div>
             
@@ -54,10 +63,10 @@ const Navbar = () => {
                     font-size: 16px, 1rem = 16px for all elements. If the font-size isn’t defined
                     explicitly in the root element, 1rem will be equal to the default font-size
                     which is provided by the browser. */}
-                    <li className='py-6 text-4xl'>Home</li>
-                    <li className='py-6 text-4xl'>About</li>
-                    <li className='py-6 text-4xl'>Portfolio</li>
-                    <li className='py-6 text-4xl'>Contact</li>
+                    <li className='py-6 text-4xl'><Link onClick={clickHandler} to="home" smooth={true} duration={500}>Home</Link></li>
+                    <li className='py-6 text-4xl'><Link onClick={clickHandler} to="about" smooth={true} duration={500}>About</Link></li>
+                    <li className='py-6 text-4xl'><Link onClick={clickHandler} to="portfolio" smooth={true} duration={500}>Portfolio</Link></li>
+                    <li className='py-6 text-4xl'><Link onClick={clickHandler} to="contact" smooth={true} duration={500}>Contact</Link></li>
                 </ul>
             </div>
 

@@ -39,15 +39,15 @@ const CreateService = (props) => {
     }
 
     return (
-        <div>
-            <Link to={'/'}>back to home</Link>
-            <h2>In need of photography service?</h2>
+        <div className='w-full h-screen bg-[#0a192f] justify-center items-center p-4 text-gray-300'>
+            <Link className='underline text-gray-300' to={'/'}>back to request list</Link><br/><br/>
+            <h2 className='text-3xl'>Enter New Photography Service Request</h2><br/>
             <div className="border">
-                <form onSubmit={submitHandler}>
+                <form onSubmit={submitHandler} className=' max-w-[600px] w-full'>
                     <div>
                         <label>First Name: </label>
                         {/* name must match key in our object (i.e. name)*/}
-                        <input type="text" name="firstName" onChange={changeHandler}/>
+                        <input className='text-black' type="text" name="firstName" onChange={changeHandler}/>
                         {
                             // ternary operator for displaying error message if it exists
                             // errors.name.message --> errors is from getter state
@@ -56,11 +56,11 @@ const CreateService = (props) => {
                             <p className="validatorError">{errors.firstName.message}</p>:
                             null
                         }
-                    </div>
+                    </div><br/>
                     <div>
                         <label>Last Name: </label>
                         {/* name must match key in our object (i.e. name)*/}
-                        <input type="text" name="lastName" onChange={changeHandler}/>
+                        <input className='text-black' type="text" name="lastName" onChange={changeHandler}/>
                         {
                             // ternary operator for displaying error message if it exists
                             // errors.name.message --> errors is from getter state
@@ -69,10 +69,10 @@ const CreateService = (props) => {
                             <p className="validatorError">{errors.lastName.message}</p>:
                             null
                         }
-                    </div>
+                    </div><br/>
                     <div>
                         <label>Description: </label>
-                        <textarea name="description" onChange={changeHandler} placeholder='Please describe photography service. Provide location, time, and date.'></textarea>
+                        <textarea className='text-black' name="description" onChange={changeHandler} rows='10' placeholder='Please describe photography service. Provide location, time, and date.'></textarea>
                         {
                             errors.description?
                             <p className="validatorError">{errors.description.message}</p>:

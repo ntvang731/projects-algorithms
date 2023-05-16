@@ -19,9 +19,9 @@ const Display = (props) => {
     },[])
 
     return (
-        <div>
-            <Link to={'/services/new'}>enter a new service request</Link>
-            <h2>Service Requests</h2>
+        <div className='w-full h-screen bg-[#0a192f] justify-center items-center p-4 text-gray-300'>
+            <h2 className='text-3xl text-blue-500'>Service Request List</h2><br/>
+            <Link className='underline' to={'/services/new'}>enter a new photography service request</Link><br/><br/>
             <table className="serviceTable">
                 <tr>
                     <th>Client Name</th>
@@ -37,7 +37,7 @@ const Display = (props) => {
                             <tr>
                                 <td>{oneService.firstName} {oneService.lastName}</td>
                                 <td>{dateFormat(oneService.createdAt, 'dddd, mmmm dS, yyyy @ hh:mm:ss')}</td>
-                                <td><Link to={`/services/${oneService._id}`}>details</Link> | <Link to={`/services/${oneService._id}/edit`}>edit</Link></td>
+                                <td><Link className='underline' to={`/services/${oneService._id}`}>details</Link> | <Link className='underline' to={`/services/${oneService._id}/edit`}>edit</Link></td>
                             </tr>
                         </table>
                     </div>

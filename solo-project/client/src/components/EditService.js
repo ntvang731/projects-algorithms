@@ -50,32 +50,32 @@ const EditService = (props) => {
     }
 
     return (
-        <div>
-            <Link to={'/'}>back to home</Link>
-            <h2>Edit Service Request</h2>
+        <div className='w-full h-screen bg-[#0a192f] justify-center items-center p-4 text-gray-300'>
+            <Link className='underline' to={'/'}>back to request list</Link><br/><br/>
+            <h2 className='text-3xl'>Edit Service Request</h2><br/>
             <div className="border">
                 <form onSubmit={submitHandler}>
                     <div>
                         <label>First Name: </label>
-                        <input type="text" name="firstName" onChange={changeHandler} value={service.firstName}/>
+                        <input className='text-black' type="text" name="firstName" onChange={changeHandler} value={service.firstName}/>
                         {
                             errors.firstName?
                             <p className="validatorError">{errors.firstName.message}</p>:
                             null
                         }
-                    </div>
+                    </div><br/>
                     <div>
                         <label>Last Name: </label>
-                        <input type="text" name="lastName" onChange={changeHandler} value={service.lastName}/>
+                        <input className='text-black' type="text" name="lastName" onChange={changeHandler} value={service.lastName}/>
                         {
                             errors.lastName?
                             <p className="validatorError">{errors.lastName.message}</p>:
                             null
                         }
-                    </div>
+                    </div><br/>
                     <div>
                         <label>Description: </label>
-                        <textarea name="description" onChange={changeHandler} value={service.description}></textarea>
+                        <textarea className='text-black' name="description" onChange={changeHandler} rows='10' value={service.description}></textarea>
                         {
                             errors.description?
                             <p className="validatorError">{errors.type.message}</p>:
