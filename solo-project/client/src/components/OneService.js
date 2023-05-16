@@ -46,7 +46,7 @@ const OneService = (props) => {
 
     return (
         <div className='w-full h-screen bg-[#0a192f] justify-center items-center p-4 text-gray-300'>
-            <Link className='underline' to={'/'}>back to home</Link><br/><br/>
+            <Link className='underline' to={'/'}>back to request list</Link><br/><br/>
                 {/* service.name --> show is the getter from useState */}
                 {/* service.name --> title is the keyname */}
                 <h2 className='text-3xl'>Service Request Details</h2><br/>
