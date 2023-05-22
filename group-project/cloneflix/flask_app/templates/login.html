@@ -393,6 +393,99 @@
             </div>
         </div>
 
+        <!-- navbar -->
+        <div class="container">
+            <!-- "navbar-dark" to have white text on black background "bg-dark" -->
+            <!-- "bg-dark will override style" -->
+            <nav class="navbar navbar-expand navbar-dark bg-dark" style="background: lightblue">
+                <div class="container">
+                    <!-- here we are using text but you can use an image as the brand -->
+                    <a href="#" class="navbar-brand">Brand</a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <!-- "active" class to stylize "Home" text to a darker color -->
+                            <!-- aria-current="page" to denote this is the current active page -->
+                            <a href="#" class="nav-link active" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- "disabled" class to make link inactive -->
+                            <a href="#" class="nav-link disabled">Store</a>
+                        </li>
+                    </ul>
+                    <!-- plain text in navbar -->
+                    <div class="navbar-text">Test</div>
+                </div>
+            </nav>
+            <div class="container">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio facere qui 
+                beatae. Beatae unde quidem hic optio magnam deserunt nobis reprehenderit similique 
+                autem iste totam temporibus veritatis, explicabo amet?
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- remove navbar-expand class to have vertical navbar elements -->
+            <!-- <nav class="navbar navbar-dark bg-dark" style="background: lightblue"> -->
+            <!-- navbar-expand-md will lead to vertical navbar elements if screensize is medium or smaller -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background: lightblue">
+                <div class="container">
+                    <!-- here we are using text but you can use an image as the brand -->
+                    <a href="#" class="navbar-brand">Brand</a>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"
+                        aria-controls="nav" aria-label="Expand Navigation">
+                        <div class="navbar-toggler-icon"></div>
+                    </button>
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <!-- "active" class to stylize "Home" text to a darker color -->
+                                <!-- aria-current="page" to denote this is the current active page -->
+                                <a href="#" class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- "disabled" class to make link inactive -->
+                                <a href="#" class="nav-link disabled">Store</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio facere qui 
+                beatae. Beatae unde quidem hic optio magnam deserunt nobis reprehenderit similique 
+                autem iste totam temporibus veritatis, explicabo amet?
+            </div>
+        </div>
+
+        <!-- color utilities -->
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis harum totam neque 
+                    excepturi eos incidunt reiciendis pariatur earum fugit quaerat!
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- can achieve "bg-dark text-light" classes by using text-bg-dark -->
+            <!-- text-bg-primary, etc. will set bg color and best set auto font color  -->
+            <!-- <div class="card bg-dark text-light"> -->
+            <!-- "bg-opacity-25" "text-opacity-25" classes for opacity styling -->
+            <!-- "opacity-50" class to change entire card opacity -->
+            <!-- <div class="card opacity-50"> -->
+            <div class="card text-bg-dark">
+                <div class="card-body">
+                    <!-- <a href="#" class="text-bg-dark">Hi</a> -->
+                    <!-- <a href="#" class="link">Hi</a> -->
+                    <a href="#" class="link-danger">Hi</a>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis harum totam neque 
+                    excepturi eos incidunt reiciendis pariatur earum fugit quaerat!
+                </div>
+            </div>
+        </div>
+
+        <!-- stack utilities -->
+
     </div>
 </body>
 </html>
