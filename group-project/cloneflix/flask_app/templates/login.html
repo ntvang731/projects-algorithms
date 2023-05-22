@@ -485,6 +485,184 @@
         </div>
 
         <!-- stack utilities -->
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="hstack">
+                        <!-- boxes stacked next to each other -->
+                        <!-- set style="width: 100%" to change width of a box(es) -->
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="hstack">
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <!-- "vstack" class for flex-box stacking style -->
+                    <!-- "gap-3" class to add gap; works with hstack as well -->
+                    <div class="vstack gap-3">
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- border utilities -->
+        <div class="container">
+            <!-- "border" class to add border -->
+            <!-- "border-5" class for border size -->
+            <!-- use "border-(insert color)" to change border color  -->
+            <div class="border border-5 border-primary rounded-3">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa 
+                    perspiciatis placeat voluptate reiciendis quibusdam quaerat doloremque, 
+                    magni dicta. Voluptates, laboriosam.
+            </div>
+        </div>
+        <div class="container">
+            <!-- "border-start", "border-end", "border-top", "border-bottom" -->
+            <div class="border-start border-bottom border-5 border-primary border-opacity-50">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa 
+                perspiciatis placeat voluptate reiciendis quibusdam quaerat doloremque, 
+                magni dicta. Voluptates, laboriosam.
+            </div>
+        </div>
+        
+        <!-- display utilities -->
+        <div class="container">
+            <div class="d-flex">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa 
+                perspiciatis placeat voluptate reiciendis quibusdam quaerat doloremque, 
+                magni dicta. Voluptates, laboriosam.
+            </div>
+            <!-- "d-none" class to hide element -->
+            <div class="d-block d-lg-none" style="color: green">
+                Content will be hidden if screensize is at breakpoint large
+            </div>
+        </div>
+        
+        <!-- spacing utilities -->
+        <div class="container">
+            <!-- "p-4" class for padding: "pt", "pb", "ps", "pe" for padding top, bottom, left, and right respectively-->
+            <!-- "m-4" class for margin -->
+            <!-- "m-auto" "pe-auto" classes for auto-margin and auto-padding respecitvely -->
+            <div class="border border-5 p-4">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa 
+                    perspiciatis placeat voluptate reiciendis quibusdam quaerat doloremque, 
+                    magni dicta. Voluptates, laboriosam.
+            </div>
+        </div>
+
+        <!-- flexbox utilities -->
+        <div class="container">
+            <div class="d-flex">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-start">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-end">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-around">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="box" style="height: 100px; width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex align-items-stretch">
+                <div class="box" style="height: 100px; width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+            <div class="container">
+                <div class="d-flex align-items-stretch">
+                    <div class="box" style="height: 100px; width: 100px"></div>
+                    <div class="box align-self-center" style="width: 100px"></div>
+                    <div class="box" style="width: 100px"></div>
+                    <div class="box" style="width: 100px"></div>
+                </div>
+            </div>
+        </div>
+            <div class="container">
+                <div class="d-flex">
+                    <!-- "flex-grow-1" class: setting to 1 will take up remaining space portion of row -->
+                    <div class="box flex-grow-1" style="height: 100px; width: 100px"></div>
+                    <div class="box align-self-center" style="width: 100px"></div>
+                    <div class="box" style="width: 100px"></div>
+                    <div class="box" style="width: 100px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex flex-column">
+                <div class="box" style="height: 100px; width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+
 
     </div>
 </body>
