@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='images/cloneflix_background_001.jpg' )}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css' )}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css' )}}">
 </head>
 <body>
-    <div id="index_wrapper" class="bg-image" style="background-image:url('../static/images/cloneflix_background_001.jpg'); height: 100vh;">
+    <div id="index_wrapper" class="bg-image" style="background-image: 
+        url('https://th.bing.com/th/id/R.d2edb29f3f970c36aadecbb01ed0bb79?rik=z%2bAuuobpN0KNSg&riu=http%3a%2f%2fisquad.tv%2fwp-content%2fuploads%2f2018%2f08%2fNetflix-Background.jpg&ehk=Ij4PSd%2bZkTcESSlAVWoGpNmExM0fu3BgteNT6AnS9lM%3d&risl=&pid=ImgRaw&r=0');
+        height: 100vh;">
+
+    <!-- <img id="vinyl" src="./images/black-vinyl-record-disc.jpg" alt="Vinyl Image"> -->
+
+    <!-- <div class="bg-image" style="background-image: url('https://mdbootstrap.com/img/new/standard/city/041.jpg');
+        height: 100vh">
+    </div> -->
 
     <!-- navbar -->
     <div class="container">
@@ -19,23 +26,20 @@
         <!-- "bg-dark will override style" -->
         <nav class="navbar navbar-expand">
             <div class="container">
-                <!-- text as brand -->
-                <!-- <a href="/" class="navbar-brand" style="color:red"><h2>CLONEFLIX</h2></a> -->
-                <!-- logo as brand -->
-                <a href="#"><img class="navbar-brand img-fluid" src="../static/images/cloneflix_logo_001.png" 
-                    alt="cloneflix_logo" style="max-width: 140px; height: auto;"></a>
+                <!-- here we are using text but you can use an image as the brand -->
+                <a href="/" class="navbar-brand" style="color:red"><h2>CLONEFLIX</h2></a>
         </nav>
     </div>
 
     <!-- mx-auto for horizontal centering -->
-    <div class="container col-4 mx-auto p-4 bg-black bg-opacity-75">
+    <div class="container col-4 mx-auto p-4 bg-dark bg-opacity-50">
+        <h4 style="color: white;">Sign In</h4>
         <form action="/user/login/process" method="POST">
-            <h4 style="color: white;">Sign In</h4>
             <!-- flash login errors -->
             {% with messages = get_flashed_messages(category_filter = ['login']) %} <!-- declare a variable called messages -->
                 {% if messages %} <!-- check if there are any messages -->
                     {% for message in messages %}<!-- loop through the messages -->
-                        <p class="error" style="color: red">{{message}}</p><!-- display each message in a paragraph tag -->
+                        <p class="error">{{message}}</p><!-- display each message in a paragraph tag -->
                     {% endfor %}
                 {% endif %}
             {% endwith %}
@@ -53,7 +57,7 @@
             <button href="/user/register" class="btn mt-4 ps-4 pe-4 pt-1 pb-1" style="background-color: red; color:white">Sign In</button>
         </form>
         <div class="pt-5">
-            <p style="color:gray">New to CloneFlix? <a href="/user/register" class="link-underline-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover" style="color:white">Sign up now</a>.</p>
+            <p style="color:gray">New to CloneFlix? <a href="/user/register" class="" style="color:whitesmoke">Sign up now</a></p>
         </div>
     </div>
 

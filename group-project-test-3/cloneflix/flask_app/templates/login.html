@@ -23,19 +23,19 @@
                 <!-- <a href="/" class="navbar-brand" style="color:red"><h2>CLONEFLIX</h2></a> -->
                 <!-- logo as brand -->
                 <a href="#"><img class="navbar-brand img-fluid" src="../static/images/cloneflix_logo_001.png" 
-                    alt="cloneflix_logo" style="max-width: 140px; height: auto;"></a>
+                    alt="cloneflix_logo" style="max-width: 200px; height: auto;"></a>
         </nav>
     </div>
 
     <!-- mx-auto for horizontal centering -->
-    <div class="container col-4 mx-auto p-4 bg-black bg-opacity-75">
+    <div class="container col-4 mx-auto p-4 bg-black bg-opacity-75 mt-2">
+        <h4 style="color: white;">Sign In</h4>
         <form action="/user/login/process" method="POST">
-            <h4 style="color: white;">Sign In</h4>
             <!-- flash login errors -->
             {% with messages = get_flashed_messages(category_filter = ['login']) %} <!-- declare a variable called messages -->
                 {% if messages %} <!-- check if there are any messages -->
                     {% for message in messages %}<!-- loop through the messages -->
-                        <p class="error" style="color: red">{{message}}</p><!-- display each message in a paragraph tag -->
+                        <p class="error">{{message}}</p><!-- display each message in a paragraph tag -->
                     {% endfor %}
                 {% endif %}
             {% endwith %}

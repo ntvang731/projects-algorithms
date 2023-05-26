@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css' )}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- container is a bootstrap class; each container size has its resize breakpoint -->
+    <!-- different container sizes: container-lg, container-md, container-sm, container-xl, container-xxl -->
+    <!-- every class=col should be nested in a class=row which is nested in a container -->
+    <div class="container">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <!-- row in bootstrap utilizes flexbox; each row takes up a total of 12 columns worth of space -->
+        <!-- col-6 will have the associated element take up 50% of the row's column space -->
+        <!-- col-auto will be sized depending on content inside column (e.g. text) -->
+        <div class="row">
+            <!-- col-lg-4 ==> when screensize is large and up, have elemeent take up 4 columns of space -->
+            <div class="col-lg-4 col-8">
+                <div class="box"></div>
+            </div>
+            <div class="col-4">
+                <div class="box"></div>
+            </div>
+            <div class="col-4">
+                <div class="box"></div>
+            </div>
+            <!-- offset space in between by 4 columns -->
+            <div class="col-4 offset-4">
+                <div class="box"></div>
+            </div>
+        </div>
+        <!-- gives every a row two columns with breakpoint lg-4 -->
+        <!-- g is for gap (x & y axis) w/ value between 1-5; gx for x-axis; gy for y-axis -->
+        <div class="row row-cols-2 row-cols-lg-4 gy-lg-5">
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+        </div>
+        <!-- nested rows -->
+        <!-- this row has 2 columns -->
+        <div class="row row-cols-2 g-3">
+            <div class="col">
+                <!-- within the row of 2 columns, 1 of the columns is parent row of 2 boxes -->
+                <div class="row">
+                    <div class="col"><div class="box"></div></div>
+                    <div class="col"><div class="box"></div></div>
+                </div>
+            </div>
+            <!-- this is the 2nd column that fills the rest of the 2 column spaced row -->
+            <div class="col">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- bootstrap class of table -->
+        <!-- bootstrap offers 8 color themes to work with -->
+        <!-- primary, secondary, success, danger, warning, info, light, dark -->
+        <table class="table table-primary">
+            <thead>
+                <tr class="table-success">
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="table-danger">Kyle</td>
+                    <td>Cook</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Sally</td>
+                    <td>Thorn</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>Jim</td>
+                    <td>Smith</td>
+                    <td>35</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- table-responsive allows for side-to-side scrollbar if data overflows -->
+        <!-- be sure to nest your table inside the class="table-responsive" -->
+        <div class="table-responsive-md">
+            <!-- striped to give each other row a different color; striped-columns for a column -->
+            <!-- table-hover; table-active; table-bordered (adds extra borders) -->
+            <!--  table-borderless (removes all borders); table-sm (reduces padding) -->
+            <table class="table table-striped table-hover table-bordered table-sm">
+                <!-- class="table-group-divider" can be applied to the head, body, or footer of a table -->
+                <thead>
+                    <tr class="table-active">
+                        <th>First</th>
+                        <th>Last</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <td>Kyle</td>
+                        <td>Cook</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>Sally</td>
+                        <td>Thorn</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>Jim</td>
+                        <td>Smith</td>
+                        <td>35</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- form -->
+            <form>
+                <div class="col-4">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-control form-control-sm">
+                </div>
+                <div class="col-4">
+                    <label for="email" class="form-label">Email</label>
+                    <!-- use "readonly" or "disabled" for user input control -->
+                    <input type="email" id="email" class="form-control form-control-sm form-control-plaintext"
+                    value="name@email.com" readonly>
+                </div>
+                <div class="col-4">
+                    <label for="hobby" class="form-label">Hobby</label>
+                    <!-- use "readonly" or "disabled" for user input control -->
+                    <input type="text" id="hobby" class="form-control form-control-sm" disabled>
+                </div>
+                <div class="col-2">
+                    <label for="plan" class="form-label">Select Plan</label>
+                    <!-- class "form-select" for selection box -->
+                    <select class="form-select form-select-sm" id="plan">
+                        <option>Plan A</option>
+                        <option>Plan B</option>
+                        <option>Plan C</option>
+                    </select>
+                </div>
+                <!-- form-switch to add toggle -->
+                <!-- <div class="form-check form-switch"> -->
+                <div class="form-check">
+                    <input type="checkbox" id="isEmployee" class="form-check-input">
+                    <label for="isEmployee" class="form-check-label">Cloneflix Employee?</label>
+                </div>
+                <!-- form-check-inline to have elements on the same line -->
+                <div class="form-check form-switch form-check-inline">
+                    <input type="checkbox" id="off" class="form-check-input">
+                    <label for="off" class="form-check-label">Turn Off</label>
+                </div>
+                <div class="form-check form-switch form-check-inline">
+                    <input type="checkbox" id="on" class="form-check-input">
+                    <label for="on" class="form-check-label">Turn On</label>
+                </div>
+                <div>
+                    <button>Submit</button>
+                </div>
+                <!-- input group -->
+                <div class="col-4">
+                    <label for="text" class="form-label">Amount</label>
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-text">$</div>
+                        <input type="number" id="text" class="form-control"/>
+                        <div class="input-group-text">.00</div>
+                        <button class="btn btn-primary">+</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-5">
+            <label for="exampleDataList" class="form-label">Datalist example</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+            <datalist id="datalistOptions">
+                <option value="San Francisco">
+                <option value="New York">
+                <option value="Seattle">
+                <option value="Los Angeles">
+                <option value="Chicago">
+            </datalist>
+        </div>
+        <!-- floating labels -->
+        <!-- mx-auto for horizontal centering -->
+        <div class="container col-4 mx-auto">
+            <form>
+                <div class="form-floating">
+                    <input type="email" id="email" class="form-control" placeholder="Enter Email">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="invalid-feedback">Invalid email</div>
+                    <div class="valid-feedback">Valid email</div>
+                </div>
+                <div class="form-floating">
+                    <!-- input must have placeholder in order to work -->
+                    <input type="text" id="password" class="form-control" placeholder="Enter Password">
+                    <!-- label must come after input in order to work -->
+                    <label for="password" class="form-label">Password</label>
+                </div>
+                <button>Sign In</button>
+            </form>
+        </div>
+
+        <!-- script not working for validation; revisit later -->
+        <!-- <script>
+            const form = document.querySelector("form")
+
+            form.addEventListener('submit', e => {
+                if (!form.checkValidity()){
+                    e.preventDefault()
+                }
+            })
+
+            form.classList.add('was-validated')
+        </script> -->
+
+        <!-- buttons -->
+        <div class="container">
+            <div>
+                <button class="btn btn-primary btn-sm">Test</button>
+                <!-- data-bs-toggle (bs stands for bootstrap) changes button to active state -->
+                <!-- use class "active" to start state as active; be sure to set aria-pressed-"true" -->
+                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="button">Test</button>
+                <button class="btn btn-link">Test</button>
+                <a class="btn btn-outline-dark" href="#">Test</a>
+                <a class="btn btn-primary btn-lg" href="https://www.nba.com/">Test</a>
+            </div>
+            <div class="btn-group-vertical btn-grou-sm">
+                <button class="btn btn-outline-primary" data-bs-toggle="button">Test</button>
+                <a class="btn btn-outline-primary">Test</a>
+                <a class="btn btn-outline-primary">Test</a>
+                <a class="btn btn-outline-primary">Test</a>
+                <a class="btn btn-outline-primary">Test</a>
+            </div>
+        </div>
+
+        <!-- alerts -->
+        <div class="container">
+            <!-- can set alert-success to any primary theme -->
+            <!-- class "btn-close" is for styling; data-bs-dismiss tells bootstrap what to close (i.e. alert class) -->
+            <!-- fade show classes for fade-animation -->
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <h1>Alert</h1>
+                <!-- alert-link is a bootstrap class for styling -->
+                <a href="#" class="alert-link">Go here to find out more</a>
+                <button class="btn-close" aria-label="close" data-bs-dismiss="alert"></button>
+            </div>
+        </div>
+
+        <!-- card -->
+        <div class="container">
+            <div class="card" style="width: 200px">
+                <img class="card-img-top" src="placeholder.png"/>
+                <!-- card-body gives content element styling such as padding -->
+                <div class="card-body">
+                    <h2 class="card-title">Title</h2>
+                    <span class="card-subtitle">Subtitle</span>
+                    <div class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 200px">
+                <img class="card-img-top" src="img_girl.jpg"/>
+                <!-- card-body gives content element styling such as padding -->
+                <div class="card-body card-img-overlay">
+                    <h2 class="card-title">Title</h2>
+                    <span class="card-subtitle">Subtitle</span>
+                    <div class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+            </div>
+            <!-- card group -->
+            <div class="card-group">
+                <div class="card" style="width: 200px">
+                    <h2 class="card-header">Header</h2>
+                    <!-- card-body gives content element styling such as padding -->
+                    <div class="card-body">
+                        <h2 class="card-title">Title</h2>
+                        <span class="card-subtitle">Subtitle</span>
+                        <div class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                    <h2 class="card-footer">Footer</h2>
+                </div>
+                <div class="card" style="width: 200px">
+                    <h2 class="card-header">Header</h2>
+                    <!-- card-body gives content element styling such as padding -->
+                    <div class="card-body">
+                        <h2 class="card-title">Title</h2>
+                        <span class="card-subtitle">Subtitle</span>
+                        <div class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                    <h2 class="card-footer">Footer</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- modals -->
+        <div class="container">
+            <!-- need button for modal -->
+            <!-- data-bs-toggle indicates that a modal element is being acted upon -->
+            <!-- data-bs-target is selecting which modal to target; #modal(i.e. read "id modal1") is
+            targeting the modal with the id="modal1"-->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Open Modal 1</button>
+            <!-- this modal is being targeted because it has id="modal1" -->
+            <!-- fade class for animation -->
+            <div class="modal fade" id="modal1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        Test
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Open Modal 2</button>
+            <!-- different modal sizes depending on screen size: modal-sm, modal-lg, modal-xl -->
+            <div class="modal fade modal-lg" id="modal2">
+                <!-- modal-dialog-centered to make modal appear in center of screen -->
+                <!-- modal-dialog-scrollable to add scroll bar to modal if content overflows -->
+                <!-- modal can take up full screen size by using modal-fullscreen in modal-dialog class -->
+                <!-- modal-fullscreen-md-down is an example of breakpoint responsiveness -->
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header"><h1>Header</h1>
+                        <!-- button for modal2 in header section -->
+                        <button class="btn-close" data-bs-dismiss="modal" data-bs-target="#modal2"></button>
+                        </div>
+                        <div class="modal-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, consequuntur laboriosam, accusamus consequatur ad obcaecati reiciendis iure expedita quasi in, eius iusto. Saepe ipsam eos consectetur. Eaque ut amet provident labore explicabo cupiditate architecto voluptate tempore commodi? Odit, libero cupiditate voluptas ducimus possimus suscipit porro est nobis autem amet quidem vitae laudantium, fuga aut, minus animi. Et, impedit quasi? Magnam, modi. Reiciendis dolorem maiores modi aliquid voluptatem rerum commodi suscipit molestias doloribus at ipsa ducimus cupiditate delectus adipisci consequatur porro, vitae assumenda accusamus hic provident. Doloribus id sapiente magni fugiat dolores tenetur provident pariatur alias quo ipsam cum omnis, culpa sit eos delectus blanditiis reprehenderit deserunt mollitia eaque dolore aliquam? Architecto dignissimos fuga tempore cum ut soluta corrupti, veniam inventore eum odit harum impedit, reprehenderit nostrum explicabo earum sed consequuntur itaque dolorum voluptate, adipisci dolore aperiam repellendus. Veniam, nostrum optio sint, possimus officia quas vero ratione ipsa neque aperiam sit animi consequuntur porro, asperiores aliquam provident suscipit tempora eius! In necessitatibus eum placeat culpa vero unde dolorum minima aut libero ratione! Rerum accusamus rem dolores, iste magni, odit suscipit pariatur et a repellat obcaecati sit saepe fuga numquam dolor quod omnis, laboriosam aspernatur? Error, eius mollitia! Est hic, quam officia omnis nesciunt deleniti laborum provident harum culpa nam laudantium asperiores facere cum corporis vero numquam. Ipsum facilis, aperiam deserunt recusandae doloribus, fuga accusantium magnam enim illo velit obcaecati modi, provident fugiat debitis consectetur! Eligendi, eaque. Quis ex ad, voluptatibus ducimus omnis reiciendis veniam fugit, alias aliquam quasi, laudantium aliquid impedit a in dolore. Maiores omnis unde quod quam nostrum consectetur officiis ut facilis tempore. Recusandae sed cumque, dolorum quaerat sint officiis iusto delectus perferendis id maiores corrupti hic obcaecati iste consectetur eos molestiae voluptatum laborum suscipit vitae quidem eius porro soluta veritatis impedit? Repudiandae debitis eligendi ipsa saepe enim dolore.</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- utility for collapsing an element (i.e. data-bs-toggle="collapse") -->
+        <!-- data-bs-target="#row1" is targeting element with id="row1" -->
+        <!-- aria-expanded: set to false if element starts off collapsed; otherwise, true if starts off expanded -->
+        <!-- aria-controls: what element is it controlling; set to the id="row1" -->
+        <div class="container">
+            <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#row1"
+            aria-expanded="false" aria-controls="row1">Toggle</button>
+
+            <!-- set default state by using class "collapse"; if default state is expanded, then use class "show" -->
+            <div class="row collapse" id="row1">
+                <div class="col">
+                    <div class="box"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- navbar -->
+        <div class="container">
+            <!-- "navbar-dark" to have white text on black background "bg-dark" -->
+            <!-- "bg-dark will override style" -->
+            <nav class="navbar navbar-expand navbar-dark bg-dark" style="background: lightblue">
+                <div class="container">
+                    <!-- here we are using text but you can use an image as the brand -->
+                    <a href="#" class="navbar-brand">Brand</a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <!-- "active" class to stylize "Home" text to a darker color -->
+                            <!-- aria-current="page" to denote this is the current active page -->
+                            <a href="#" class="nav-link active" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- "disabled" class to make link inactive -->
+                            <a href="#" class="nav-link disabled">Store</a>
+                        </li>
+                    </ul>
+                    <!-- plain text in navbar -->
+                    <div class="navbar-text">Test</div>
+                </div>
+            </nav>
+            <div class="container">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio facere qui 
+                beatae. Beatae unde quidem hic optio magnam deserunt nobis reprehenderit similique 
+                autem iste totam temporibus veritatis, explicabo amet?
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- remove navbar-expand class to have vertical navbar elements -->
+            <!-- <nav class="navbar navbar-dark bg-dark" style="background: lightblue"> -->
+            <!-- navbar-expand-md will lead to vertical navbar elements if screensize is medium or smaller -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background: lightblue">
+                <div class="container">
+                    <!-- here we are using text but you can use an image as the brand -->
+                    <a href="#" class="navbar-brand">Brand</a>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"
+                        aria-controls="nav" aria-label="Expand Navigation">
+                        <div class="navbar-toggler-icon"></div>
+                    </button>
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <!-- "active" class to stylize "Home" text to a darker color -->
+                                <!-- aria-current="page" to denote this is the current active page -->
+                                <a href="#" class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- "disabled" class to make link inactive -->
+                                <a href="#" class="nav-link disabled">Store</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio facere qui 
+                beatae. Beatae unde quidem hic optio magnam deserunt nobis reprehenderit similique 
+                autem iste totam temporibus veritatis, explicabo amet?
+            </div>
+        </div>
+
+        <!-- color utilities -->
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis harum totam neque 
+                    excepturi eos incidunt reiciendis pariatur earum fugit quaerat!
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- can achieve "bg-dark text-light" classes by using text-bg-dark -->
+            <!-- text-bg-primary, etc. will set bg color and best set auto font color  -->
+            <!-- <div class="card bg-dark text-light"> -->
+            <!-- "bg-opacity-25" "text-opacity-25" classes for opacity styling -->
+            <!-- "opacity-50" class to change entire card opacity -->
+            <!-- <div class="card opacity-50"> -->
+            <div class="card text-bg-dark">
+                <div class="card-body">
+                    <!-- <a href="#" class="text-bg-dark">Hi</a> -->
+                    <!-- <a href="#" class="link">Hi</a> -->
+                    <a href="#" class="link-danger">Hi</a>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis harum totam neque 
+                    excepturi eos incidunt reiciendis pariatur earum fugit quaerat!
+                </div>
+            </div>
+        </div>
+
+        <!-- stack utilities -->
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="hstack">
+                        <!-- boxes stacked next to each other -->
+                        <!-- set style="width: 100%" to change width of a box(es) -->
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="hstack">
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <!-- "vstack" class for flex-box stacking style -->
+                    <!-- "gap-3" class to add gap; works with hstack as well -->
+                    <div class="vstack gap-3">
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                        <div class="box" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- border utilities -->
+        <div class="container">
+            <!-- "border" class to add border -->
+            <!-- "border-5" class for border size -->
+            <!-- use "border-(insert color)" to change border color  -->
+            <div class="border border-5 border-primary rounded-3">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa 
+                    perspiciatis placeat voluptate reiciendis quibusdam quaerat doloremque, 
+                    magni dicta. Voluptates, laboriosam.
+            </div>
+        </div>
+        <div class="container">
+            <!-- "border-start", "border-end", "border-top", "border-bottom" -->
+            <div class="border-start border-bottom border-5 border-primary border-opacity-50">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa 
+                perspiciatis placeat voluptate reiciendis quibusdam quaerat doloremque, 
+                magni dicta. Voluptates, laboriosam.
+            </div>
+        </div>
+        
+        <!-- display utilities -->
+        <div class="container">
+            <div class="d-flex">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa 
+                perspiciatis placeat voluptate reiciendis quibusdam quaerat doloremque, 
+                magni dicta. Voluptates, laboriosam.
+            </div>
+            <!-- "d-none" class to hide element -->
+            <div class="d-block d-lg-none" style="color: green">
+                Content will be hidden if screensize is at breakpoint large
+            </div>
+        </div>
+        
+        <!-- spacing utilities -->
+        <div class="container">
+            <!-- "p-4" class for padding: "pt", "pb", "ps", "pe" for padding top, bottom, left, and right respectively-->
+            <!-- "m-4" class for margin -->
+            <!-- "m-auto" "pe-auto" classes for auto-margin and auto-padding respecitvely -->
+            <div class="border border-5 p-4">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa 
+                    perspiciatis placeat voluptate reiciendis quibusdam quaerat doloremque, 
+                    magni dicta. Voluptates, laboriosam.
+            </div>
+        </div>
+
+        <!-- flexbox utilities -->
+        <div class="container">
+            <div class="d-flex">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-start">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-end">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-around">
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="box" style="height: 100px; width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex align-items-stretch">
+                <div class="box" style="height: 100px; width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+            <div class="container">
+                <div class="d-flex align-items-stretch">
+                    <div class="box" style="height: 100px; width: 100px"></div>
+                    <div class="box align-self-center" style="width: 100px"></div>
+                    <div class="box" style="width: 100px"></div>
+                    <div class="box" style="width: 100px"></div>
+                </div>
+            </div>
+        </div>
+            <div class="container">
+                <div class="d-flex">
+                    <!-- "flex-grow-1" class: setting to 1 will take up remaining space portion of row -->
+                    <div class="box flex-grow-1" style="height: 100px; width: 100px"></div>
+                    <div class="box align-self-center" style="width: 100px"></div>
+                    <div class="box" style="width: 100px"></div>
+                    <div class="box" style="width: 100px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex flex-column">
+                <div class="box" style="height: 100px; width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+                <div class="box" style="width: 100px"></div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
